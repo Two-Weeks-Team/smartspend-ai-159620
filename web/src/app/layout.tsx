@@ -1,8 +1,7 @@
-import { Inter, Source_Sans_Pro } from "next/font/google";
-import "../app/globals.css";
+import { Inter } from "next/font/google";
+import '../app/globals.css';
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const source = Source_Sans_Pro({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata = {
   title: "SmartSpend AI",
@@ -15,8 +14,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${source.variable}`}>
-      <body className="font-sans bg-background text-foreground antialiased">
+    <html lang="en" className={`${inter.variable}`}> 
+      <body className="font-inter bg-background text-foreground antialiased">
         {children}
       </body>
     </html>
